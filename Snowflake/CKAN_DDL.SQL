@@ -41,7 +41,8 @@ insert into control_table values (
 ,'sf-testing'
 ,'TRIPS');
 
-
+-- Logs to flush the stream
+create or replace table public.ckan_log (dt date, packageid string, table_name string);
 
 --EXAMPLE: let's ETL a test table to this schema.
 use role sysadmin;
